@@ -1,3 +1,4 @@
+  
 const request = require("request");
 const option = clientToken => {
   const data = {
@@ -5,17 +6,21 @@ const option = clientToken => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: ""
+      Authorization: "key=AAAAv_1q94w:APA91bHrf3NYu7T_UMG_pjMcw7qE4NUzViCMb6EHaXhsyVHsfALupKZniYuBYtR-aMzI-EyUDwgzxQw716I2HJXQsZNca9byb_K3vY13Befdia67h7PhhKc_-tdpp1BXp1TzApH9oXT1"
     },
-    body: JSON.stringfy({
+    body: JSON.stringify({
       notification: {
-        title: "",
-        body: ""
+        title: "ddd",
+        body: "dddd"
       },
-      to: "token"
+      to: "dpTPCsOt4jE:APA91bGx4z7d_nVgFml95fk-BwFZxTpwZhbrYLRuWWBZ2Z5_3CcJ7iA3WuCdU8nXZasNWna_eZ-hxHBsgKG4Myevk8BJx0Dqx7BDAlnoqNzkqsT0KCEmqmWQiUOKTpH-Xvb2xSgVfUqr"
     })
-  };
+  };return data
 };
 sendFcmMessage = () => {
-  request(option(""));
+  request.post(option(""));
 };
+
+module.exports={
+    sendFcmMessage:sendFcmMessage
+}

@@ -4,7 +4,8 @@
   "description": "node api server",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start":"node in"
   },
   "author": "",
   "license": "ISC",
